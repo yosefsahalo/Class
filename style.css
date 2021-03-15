@@ -1,0 +1,10 @@
+#maidDiv{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: auto;
+    width: 33vw;
+}
+table,td,th{
+    border: 1px solid black;
+}
