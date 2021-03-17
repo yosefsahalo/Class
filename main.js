@@ -11,10 +11,13 @@ class Car {
         return `${this.numberOfWheels} ${this.sizeOfEngine} ${this.color} `
     }
     static bigestEngine(object1, object2, object3) {
-        // let arrayObject2 = [object1, object2, object3];
-        // arrayObject2.forEach((keyElement) => {
-        //     console.log(keyElement.sizeOfEngine);
-        // });
+        // let arrayObject2 = [object1.sizeOfEngine, object2.sizeOfEngine, object3.sizeOfEngine];
+        // for (let i = 0; i < arrayObject2.length; i++) {
+        //     let maxEngine = [];
+        //     maxEngine.push(arrayObject2[i].sizeOfEngine);
+        //     let maxEngine1 = maxEngine.sort(function(a, b){return a - b}); 
+        //     console.log(maxEngine1);
+        // }
 
         if (object1.sizeOfEngine > object2.sizeOfEngine && object1.sizeOfEngine > object3.sizeOfEngine) {
             return object1.sizeOfEngine;
