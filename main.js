@@ -11,28 +11,18 @@ class Car {
         return `${this.numberOfWheels} ${this.sizeOfEngine} ${this.color} `
     }
     static bigestEngine(object1, object2, object3) {
-        // let arrayObject2 = [object1.sizeOfEngine, object2.sizeOfEngine, object3.sizeOfEngine];
-        // for (let i = 0; i < arrayObject2.length; i++) {
-        //     let maxEngine = [];
-        //     maxEngine.push(arrayObject2[i].sizeOfEngine);
-        //     let maxEngine1 = maxEngine.sort(function(a, b){return a - b}); 
-        //     console.log(maxEngine1);
-        // }
-
-        if (object1.sizeOfEngine > object2.sizeOfEngine && object1.sizeOfEngine > object3.sizeOfEngine) {
-            return object1.sizeOfEngine;
-        }
-        else if (object2.sizeOfEngine > object1.sizeOfEngine && object2.sizeOfEngine > object3.sizeOfEngine) {
-            return object2.sizeOfEngine;
-        }
-        else {
-            return object3.sizeOfEngine;
-        }
+        let arrayObject2 = [object1, object2, object3];
+        let arrayObject3 = [];
+        arrayObject2.forEach(engineElement => {
+            arrayObject3.push(engineElement.sizeOfEngine);
+            arrayObject3.sort(function(a, b){return a - b});
+        });
+        return `${arrayObject3[arrayObject3.length -1]}`
     }
 }
-let car = new Car(4, 2800, 'green');
-let car1 = new Car(4, 1800, 'yellow');
-let car2 = new Car(4, 2000, 'red');
+let car = new Car(4, 5000, 'green');
+let car1 = new Car(4, 2000, 'yellow');
+let car2 = new Car(4, 3000, 'red');
 console.log(car);
 console.log(car.allTheKeys());
 
